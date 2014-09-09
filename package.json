@@ -1,0 +1,35 @@
+{
+  "name": "grunt-jekyll-extless",
+  "version": "0.0.2",
+  "description": "Remove trailing slash of jekyll site in amazon s3.",
+  "homepage": "https://github.com/Gizra/medicart/tree/master/task",
+  "repository": "https://github.com/Gizra/medicart/tree/master/task/grunt-jekyll-extless",
+  "author": {
+    "name": "Carlos Mantilla",
+    "email": "carlos@gizra.com",
+    "url": "http://www.gizra.com"
+  },
+  "keywords": [
+    "gruntplugin"
+  ],
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-nodeunit": "~0.3.0",
+    "jshint-stylish": "~0.1.5",
+    "load-grunt-tasks": "~0.3.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "shelljs": "^0.3.0"
+  }
+}
