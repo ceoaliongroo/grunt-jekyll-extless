@@ -19,7 +19,7 @@ module.exports = function (grunt) {
 
     var options = this.options({
       keyword: this.options.keyword || true,
-      script: this.options.script || 'rename.sh'
+      script: this.options.script || './rename.sh'
     });
 
     var isExpandedPair;
