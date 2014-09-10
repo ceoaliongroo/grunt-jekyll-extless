@@ -1,6 +1,6 @@
 # grunt-jekyll-extless
 
-> Remove trailing slash of jekyll site in amazon s3.
+Grunt task to transform the jekyll _post pages, to file extless for Amazon S2 plataform.
 
 ## Getting Started
 This plugin requires Grunt.
@@ -37,17 +37,11 @@ grunt.initConfig({
 
 ### Options
 
-#### options.separator
+#### options.script
 Type: `String`
-Default value: `',  '`
+Default value: `'./rename.sh'`
 
-A string value that is used to do something with whatever.
-
-#### options.punctuation
-Type: `String`
-Default value: `'.'`
-
-A string value that is used to do something else with whatever else.
+Path and filename of the bash script file that rename the files created from the jekyll's _post folders.
 
 ### Usage Examples
 
@@ -58,8 +52,10 @@ In this example, the default options are used to do something with whatever. So 
 grunt.initConfig({
   jekyll_extless: {
     options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
+    target: {
+      // It's necessary define the targets
+      src: ['app/_posts/**/*.md'],
+      dest: 'dist/'
     },
   },
 })
@@ -72,11 +68,13 @@ In this example, custom options are used to do something else with whatever else
 grunt.initConfig({
   jekyll_extless: {
     options: {
-      separator: ': ',
-      punctuation: ' !!!',
+      // Define a new script to test.
+      separator: '/scripts/newRename.sh '
     },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
+    target: {
+      // It's necessary define the targets
+      src: ['app/_posts/**/*.md'],
+      dest: 'dist/'
     },
   },
 })
